@@ -72,7 +72,7 @@ For the bonus version (supporting multiple file descriptors), simply use `get_ne
   Data is read in chunks of `BUFFER_SIZE` bytes. The function manages an internal buffer to store the data between calls until a newline character is found.
   BUFFER_SIZE is 42 by default; you can redefine it at compile time.
   ```c
-  cc -Wall -Wextra -Werror main.c get_next_line.c get_next_line_utils.c 
+  cc -Wall -Wextra -Werror -D BUFFER_SIZE=10 main.c get_next_line.c get_next_line_utils.c 
   ```
 
 - **Memory Management:**  
